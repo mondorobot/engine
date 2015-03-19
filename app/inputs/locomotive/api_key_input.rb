@@ -19,7 +19,7 @@ module Locomotive
 
     def api_key_html
       api_key = self.object.api_key || I18n.t('locomotive.api_key.none')
-      template.content_tag :code, api_key
+      template.content_tag :textarea, api_key, :readonly => 'readonly', :class => 'api-key-display'
     end
 
     def regenerate_button
